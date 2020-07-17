@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+.modal { /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 20px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 50%; /* half width */
+    height: 50%; /* half height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+    margin:10% auto;
+    padding: 0;
+
+    border: 1px solid #888;
+    border-radius: 5px;
+
+    width: 30%;
+    height: auto;
+    overflow: hidden;
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-header {
+    padding: 2px 16px;
+    background-color: #451b04;
+    color: white;
+}
+.form-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    width: 70%;
+
+    position: relative;
+    left: 10%;
+}
+label {
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 300;
+    color: black;
+}
+input {
+    margin-top: 5px;
+    height: 30px;
+    border: none;
+    font-size: medium;
+    border-radius: 2.5px;
+}
+.add{
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    background-color: green;
+    margin-top: 7px;
+    position: relative;
+    height: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/****STYLING FOR TABLE*****/
+.table {
+    margin: 10px;
+    background-color: purple;
+}
+.partcles {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+table {
+    width: 100%;
+    margin-top: 10px;
+    text-emphasis: left;
+    border-collapse: collapse;
+    
+    table-layout: fixed
+}
+th{
+    vertical-align: center; 
+    padding: 5px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+td{
+    text-align: left;
+    color: #f5f5f5;
+}
+
+tr:hover {background-color: blueviolet;}
+table, th, td{
+    border: 1px solid black;
 }
